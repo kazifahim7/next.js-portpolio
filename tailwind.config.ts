@@ -1,6 +1,10 @@
 import type { Config } from "tailwindcss";
 
-export default {
+// Import necessary modules
+import daisyui from "daisyui";
+import { keepTheme } from "keep-react/keepTheme"; // Make sure to replace with the actual path
+
+const config: Config = {
   content: [
     "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
@@ -14,5 +18,8 @@ export default {
       },
     },
   },
-  plugins: [],
-} satisfies Config;
+  plugins: [daisyui],
+};
+
+// Apply keepTheme to the config before exporting
+export default keepTheme(config);

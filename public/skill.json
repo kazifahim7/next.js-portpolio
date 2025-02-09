@@ -1,0 +1,90 @@
+[
+    {
+        "name": "HTML",
+        "image": "https://i.ibb.co/PCkB4hQ/html.jpg"
+    },
+    {
+        "name": "CSS",
+        "image": "https://i.ibb.co/3kwLTMd/css.png"
+    },
+    {
+        "name": "JavaScript",
+        "image": "https://i.ibb.co/rFwG0DJ/javascript.png"
+    },
+    {
+        "name": "TypeScript",
+        "image": "https://i.ibb.co/ngy9Z1v/typescript.png"
+    },
+    {
+        "name": "ES6",
+        "image": "https://i.ibb.co/6Dqvfcj/es6.jpg"
+    },
+    {
+        "name": "Tailwind",
+        "image": "https://i.ibb.co/4RjMfR8/tailwindcss.png"
+    },
+    {
+        "name": "Shadcn UI",
+        "image": "https://i.ibb.co/XxJXfT2/shadcn.png"
+    },
+    {
+        "name": "Next UI",
+        "image": "https://i.ibb.co/JHCJHWG/nextui.png"
+    },
+    {
+        "name": "Framer Motion",
+        "image": "https://i.ibb.co/KN0mCBR/framer-motion.png"
+    },
+    {
+        "name": "React",
+        "image": "https://i.ibb.co/bXKTZfw/react.png"
+    },
+    {
+        "name": "React Router",
+        "image": "https://i.ibb.co.com/8gzjddr/react-router-icon.png"
+    },
+    {
+        "name": "Redux",
+        "image": "https://i.ibb.co/r07kx6F/redux.jpg"
+    },
+    {
+        "name": "Next.js",
+        "image": "https://i.ibb.co/r7VPh5H/nextjs.png"
+    },
+    {
+        "name": "Firebase",
+        "image": "https://i.ibb.co/r7VPh5H/nextjs.png"
+    },
+    {
+        "name": "Clerk",
+        "image": "https://i.ibb.co/CKY0Xzp/clerk.jpg"
+    },
+    {
+        "name": "Auth.js",
+        "image": "https://i.ibb.co/fH9DC2z/next-auth.jpg"
+    },
+    {
+        "name": "JWT",
+        "image": "https://i.ibb.co.com/nkGs0jm/jwt-icon.png"
+    },
+    {
+        "name": "Node.js",
+        "image": "https://i.ibb.co.com/4Vwn1N9/node-icon.png"
+    },
+    {
+        "name": "Express.js",
+        "image": "https://i.ibb.co/5kDdgWt/express.jpg"
+    },
+    {
+        "name": "MongoDB",
+        "image": "https://i.ibb.co/hKbHCHm/mongodb.webp"
+    },
+    {
+        "name": "Mongoose",
+        "image": "https://i.ibb.co.com/QXm8phg/mongooseicon.png"
+    },
+    {
+        "name": "Stripe",
+        "image": "https://i.ibb.co/T0xv808/stripe.png"
+    }
+]
