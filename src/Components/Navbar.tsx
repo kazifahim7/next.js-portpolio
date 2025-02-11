@@ -56,6 +56,7 @@ export default function Navbar() {
         roles === "admin" ? (
             <button onClick={() => {
                 localStorage.removeItem("token")
+                document.cookie = "tokens=; path=/; max-age=0;";
                 setRoles('')
                 toast.success("logout successful")
             }} className="text-xl font-semibold text-gray-900 dark:text-white">

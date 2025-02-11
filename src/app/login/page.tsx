@@ -16,7 +16,7 @@ const Login = () => {
 
     // Handle form submission
     const onSubmit: SubmitHandler<FieldValues> = async(data) => {
-        console.log(data)
+      
         const id = toast.loading("creating....")
         try {
             const res = await fetch("https://blog-application-wine-omega.vercel.app/api/auth/login", {
@@ -25,13 +25,17 @@ const Login = () => {
                     "Content-Type": "application/json",
                     
                 },
-                credentials:"include",
+                credentials:"same-origin",
                 body: JSON.stringify(data)
             })
             const result = await res.json()
-            console.log(result)
+        
             if (result.data) {
                 localStorage.setItem("token",result?.data?.token)
+                const isProduction = process.env.NODE_ENV === 'production';
+                const cookieSettings = `tokens=${result?.data?.token}; path=/; max-age=${60 * 60 * 24}; ${isProduction ? 'secure; ' : ''}samesite=strict;`;
+                document.cookie = cookieSettings;
+
                 toast.success("Login successful", { id })
                 router.push("/")
                 reset()
