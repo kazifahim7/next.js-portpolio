@@ -1,33 +1,64 @@
 "use client";
 
-import { useState, useMemo } from "react";
+import { useState, useMemo, useEffect } from "react";
 import Link from "next/link";
 import { Dialog, DialogPanel, PopoverGroup } from "@headlessui/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
 import ThemeSwitcher from "./Theme";
+import { jwtDecode } from "jwt-decode";
+import { toast } from "sonner";
+
+
 
 export default function Navbar() {
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
     const path = usePathname();
-    const role = "admin"; 
+    interface CustomJwtPayload {
+        role: string;
+
+    }
+    const  [roles,setRoles]=useState('')
+
+    
+
+    useEffect(()=>{
+        const token = localStorage.getItem("token");
+
+        if (token) {
+            // Decode the token and cast it to the CustomJwtPayload type
+            const decoded = jwtDecode<CustomJwtPayload>(token);
+            console.log(decoded);
+           
+            setRoles(decoded.role)
+        } 
+
+
+    },[roles])
+
+
+    
 
     // Navigation Links
     const navLinks = useMemo(
         () => [
-            { name: "/Home", href: "/" },
-            { name: "/projects", href: "/projects" },
-            { name: "/blog", href: "/blog" },
-            { name: "/contact", href: "/contact" },
+            { name: "Home", href: "/" },
+            { name: "projects", href: "/projects" },
+            { name: "blog", href: "/blog" },
+            { name: "contact", href: "/contact" },
         ],
         []
     );
 
-  
+
     const renderAuthButton = () =>
-        role === "admin" ? (
-            <button className="text-xl font-semibold text-gray-900 dark:text-white">
+        roles === "admin" ? (
+            <button onClick={() => {
+                localStorage.removeItem("token")
+                setRoles('')
+                toast.success("logout successful")
+            }} className="text-xl font-semibold text-gray-900 dark:text-white">
                 Logout <span aria-hidden="true">&rarr;</span>
             </button>
         ) : (
@@ -81,12 +112,12 @@ export default function Navbar() {
                         </Link>
                     ))}
 
-                    {role === "admin" && (
+                    {roles === "admin" && (
                         <Link
-                            href="/dashBoard/manageUser"
+                            href="/dashboard/createProject"
                             className="block rounded-lg px-3 py-2 text-xl font-semibold text-gray-900 dark:text-white "
                         >
-                            /Dashboard
+                            Dashboard
                         </Link>
                     )}
                 </PopoverGroup>
@@ -141,13 +172,13 @@ export default function Navbar() {
                             </Link>
                         ))}
 
-                        {role === "admin" && (
+                        {roles === "admin" && (
                             <Link
-                                href="/dashBoard/manageUser"
+                                href="/dashboard/createProject"
                                 onClick={() => setMobileMenuOpen(false)}
                                 className="block rounded-lg px-3 py-2 text-xl font-semibold text-gray-900 dark:text-white "
                             >
-                                /Dashboard
+                                Dashboard
                             </Link>
                         )}
                     </div>
