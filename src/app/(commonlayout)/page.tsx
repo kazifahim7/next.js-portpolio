@@ -5,7 +5,11 @@ import Skill from "@/Components/Skill";
 import Testimonials from "@/Components/Testimonials";
 import Title from "@/Components/Title";
 import WebDevFeatureSection from "@/Components/WebDeveloperFeture";
-
+import { Metadata } from "next";
+export const metadata: Metadata = {
+  title: "DevFahim | Home",
+  description: "This is me, Kazi Fahim. I am a MERN stack developer.",
+};
 
 export default function Home() {
   return (
