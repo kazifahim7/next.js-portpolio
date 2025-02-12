@@ -8,15 +8,15 @@ const Header = () => {
     return (
         <div className="py-16">
             <div className="flex flex-col lg:flex-row-reverse gap-4 p-10 container mx-auto w-full">
-               
-                    <DotLottieReact
-                        className="lg:w-[70%]  lg:h-auto "
-                        src="/animation2.json"
-                        
-                        loop
-                        autoplay
-                    />
-               
+
+                <DotLottieReact
+                    className="w-full lg:w-[70%]  lg:h-auto "
+                    src="/animation2.json"
+
+                    loop
+                    autoplay
+                />
+
 
                 <section className="pt-10 overflow-hidden md:pt-0 sm:pt-16 2xl:pt-16 lg:w-[65%]">
                     <div className="px-4 mx-auto sm:px-6 lg:px-8 container">

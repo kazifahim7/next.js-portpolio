@@ -71,7 +71,7 @@ const UpdateBlogPage = () => {
                 <div className="mb-4">
                     <label className="block text-sm font-medium text-black">Title</label>
                     <Controller name="title" control={control} render={({ field }) => (
-                        <input {...field} className="w-full p-3 mt-1 text-black border rounded-lg" placeholder="Enter blog title" />
+                        <input {...field} className="w-full p-3 mt-1 text-black bg-gray-200 border rounded-lg" placeholder="Enter blog title" />
                     )} />
                     {errors.title && <p className="text-red-500 text-sm mt-1">{errors.title.message?.toString()}</p>}
                 </div>
@@ -80,7 +80,7 @@ const UpdateBlogPage = () => {
                 <div className="mb-4">
                     <label className="block text-sm font-medium text-black">Image URL</label>
                     <Controller name="image" control={control} render={({ field }) => (
-                        <input {...field} className="w-full p-3 mt-1 border text-black rounded-lg" placeholder="Enter image URL" />
+                        <input {...field} className="w-full p-3 mt-1 border text-black bg-gray-200 rounded-lg" placeholder="Enter image URL" />
                     )} />
                 </div>
 
@@ -88,7 +88,7 @@ const UpdateBlogPage = () => {
                 <div className="mb-4">
                     <label className="block text-sm font-medium text-black">Content</label>
                     <Controller name="content" control={control} render={({ field }) => (
-                        <textarea {...field} className="w-full p-3 mt-1 border text-black rounded-lg" rows={6} placeholder="Enter blog content" />
+                        <textarea {...field} className="w-full p-3 mt-1 border text-black bg-gray-200 rounded-lg" rows={6} placeholder="Enter blog content" />
                     )} />
                 </div>
 
@@ -96,7 +96,7 @@ const UpdateBlogPage = () => {
                 <div className="mb-4">
                     <label className="block text-sm font-medium text-black">Category</label>
                     <Controller name="category" control={control} render={({ field }) => (
-                        <input {...field} className="w-full p-3 mt-1 text-black border rounded-lg" placeholder="Enter blog category" />
+                        <input {...field} className="w-full p-3 mt-1 text-black border bg-gray-200 rounded-lg" placeholder="Enter blog category" />
                     )} />
                 </div>
 

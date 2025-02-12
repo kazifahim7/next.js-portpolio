@@ -60,14 +60,14 @@ const AllBlog = () => {
 
     return (
         <div className="">
-            <h1 className="text-3xl lg:text-5xl text-center font-extrabold text-white">
+            <h1 className="text-3xl lg:text-5xl text-center font-extrabold text-green-500">
                 Created Blog
             </h1>
-            <div className="overflow-x-auto mt-4 text-white">
+            <div className="overflow-x-auto mt-4 text-green-500">
                 <table className="table">
                     {/* head */}
                     <thead>
-                        <tr className="bg-base-200 text-white">
+                        <tr className="bg-base-200 text-purple-400">
                             <th>Title</th>
                             <th>category</th>
                             <th>Content</th>

@@ -49,10 +49,10 @@ const CreateProjectForm = () => {
     };
 
     return (
-        <div className="max-w-3xl mx-auto p-8 bg-white shadow-xl rounded-2xl border border-gray-300">
-            <h2 className="text-center text-black mb-6">Create a New Project</h2>
+        <div className="max-w-3xl mx-auto p-8 bg-white shadow-xl rounded-2xl border-4 border-green-500 ">
+            <h2 className="text-center text-green-500  text-xl mb-6">Create a New Project</h2>
 
-            <form onSubmit={handleSubmit(onSubmit)} className='text-black'>
+            <form onSubmit={handleSubmit(onSubmit)} className='text-black '>
 
                 {/* Project Name */}
                 <div className="mb-4">

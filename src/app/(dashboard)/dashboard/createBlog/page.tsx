@@ -48,13 +48,13 @@ export default function BlogCreationForm() {
         <div className=" dark:text-white text-black min-h-screen p-6">
             {/* Header Section */}
             <div className="mb-6">
-                <h2 className="text-2xl font-bold text-white text-center">Create a Blog Post</h2>
+                <h2 className="text-2xl font-bold text-green-500 text-center">Create a Blog Post</h2>
             </div>
 
             {/* Form Section */}
             <form
                 onSubmit={handleSubmit(onSubmit)}
-                className="max-w-2xl mx-auto text-black bg-gray-100 p-6 rounded-lg shadow-lg"
+                className="max-w-2xl mx-auto text-black border-4 border-green-500 bg-gray-100 p-6 rounded-lg shadow-lg"
             >
                 {/* Title Field */}
                 <div className="mb-4">

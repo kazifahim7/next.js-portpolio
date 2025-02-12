@@ -60,14 +60,14 @@ const ProjectPage = () => {
 
     return (
         <div className="">
-            <h1 className="text-3xl lg:text-5xl text-center font-extrabold text-white">
+            <h1 className="text-3xl lg:text-5xl text-center font-extrabold text-green-500">
                 Created Projects
             </h1>
-            <div className="overflow-x-auto mt-4 text-white">
+            <div className="overflow-x-auto mt-4 text-green-500">
                 <table className="table">
                     {/* head */}
                     <thead>
-                        <tr className="bg-base-200 text-white">
+                        <tr className="bg-base-200 text-purple-500">
                             <th>Name</th>
                             <th>Live Link</th>
                             <th>Code Link</th>

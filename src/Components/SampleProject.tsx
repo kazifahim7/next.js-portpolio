@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 
+
 const SampleProject = async() => {
     const res = await fetch("https://blog-application-wine-omega.vercel.app/api/project",{next:{revalidate:30}})
     const projects= await res.json() || []
@@ -9,7 +10,7 @@ const SampleProject = async() => {
 
 
     return (
-        <div className="bg-white dark:bg-gray-900 py-28 container mx-auto">
+        <div  className="bg-white dark:bg-gray-900 py-28 container mx-auto">
             <h1 className="text-3xl lg:text-5xl text-start font-extrabold dark:text-white text-black">Recent Project</h1>
             
             <div className="pt-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">

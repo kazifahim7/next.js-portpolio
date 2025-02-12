@@ -1,9 +1,14 @@
 import Footer from "@/Components/Footer";
 import Navbar from "@/Components/Navbar";
+import { Metadata } from "next";
 
 
 
 
+export const metadata: Metadata = {
+  title: "DevFahim",
+  description: "This is me, Kazi Fahim. I am a MERN stack developer.",
+};
 
 
 
